@@ -1,70 +1,19 @@
-# Getting Started with Create React App
+# Up Note 과제
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<br>
 
-## Available Scripts
+## 📝기능 구현 목록 작성
 
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. UI는 업노트 기반, 최소 가로 길이 = 1400px, 최대 가로 길이 = 1920px
+2. 최초의 화면에서 NOTEBOOKS는 하나도 없는 상태
+3. 데이터는 로컬 스토리지에 저장해서 구현
+4. 노트북의 목록 확인 가능하게 하기.
+5. 노트북을 추가와 삭제할 수 있게 하기.
+6. 노트북 안에 노트북은 추가 못하게 막기.
+7. 노트북을 클릭하면 NOTEBOOKS에 있는 메모 목록을 확인 할 수 있게 하기
+8. 메모 목록에서 메모를 선택하여 메모 내용을 확인하고 수정할 수 있게 하기
+9. 텍스트 편집기는 ‘lexical text editor’를 설치 후 사용하여 구현
+   1. 텍스트 편집 영역의 위, 아래 버튼은 구현하지 않습니다.(Checklist, Insert Image, Heading, Bold 등)
+10. 텍스트 입력 후 (별도의 저장 버튼 없이) 즉시 혹은 일정 시간 후에 입력 사항이 저장 되어야 한다.
+11. 메모 목록에서 메모 내용의 첫번째 줄이 메모의 제목으로 표시
+12. 메모의 제목이 메모 목록의 가로 길이를 넘어가는 경우, 말줄임표(...) 처리
