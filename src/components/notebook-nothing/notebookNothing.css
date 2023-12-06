@@ -1,0 +1,55 @@
+.notebook-nothing-box {
+  flex: 1;
+}
+
+/* 네비바 */
+.notebook-nothing-box .top-search-box {
+  height: 33px;
+  display: flex;
+  align-items: center;
+  background-color: rgb(232, 232, 232);
+}
+
+.notebook-nothing-box .icon-wrap {
+  display: flex;
+  width: 50px;
+  justify-content: center;
+}
+
+.notebook-nothing-box .icon-wrap div {
+  margin: 0 7px;
+}
+
+.notebook-nothing-box .top-search-box .margin {
+  margin: 0 25px;
+}
+
+.notebook-nothing-box .top-search-box .left-sort {
+  margin-right: auto;
+}
+
+/* 본문 */
+.notebook-nothing-box .description-box {
+  height: 100%;
+}
+
+.notebook-nothing-box .description-box img {
+  width: 90px;
+  height: 90px;
+  margin-bottom: 10px;
+}
+
+.notebook-nothing-box .description-box .color-blue {
+  color: rgb(0, 106, 255);
+}
+
+.notebook-nothing-box .description-box .desc-center-sort {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 150px;
+}
+
+.notebook-nothing-box .description-box .desc-center-sort div {
+  margin: 10px 0;
+}

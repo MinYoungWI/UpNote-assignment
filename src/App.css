@@ -7,18 +7,14 @@
   width: 100%;
   min-width: 1400px;
   max-width: 1920px;
-  height: auto;
+  height: 100vh;
   margin: 0 auto;
 }
 
-.main-box {
+.App .main-box {
   width: 100%;
   height: auto;
   display: flex;
-}
-
-.center-notes-list {
-  width: 310px;
 }
 
 .right-text-edit {

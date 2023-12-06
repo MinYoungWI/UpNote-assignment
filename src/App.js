@@ -1,6 +1,8 @@
 import "./App.css";
 import TopNav from "./components/top-nav/topNav";
 import LeftNav from "./components/left-nav/leftNav";
+import NotebookNothing from "./components/notebook-nothing/notebookNothing";
+import NoteList from "./components/note-list/noteList";
 
 function App() {
   return (
@@ -8,8 +10,9 @@ function App() {
       <TopNav />
       <div className="main-box">
         <LeftNav />
-        <div className="center-notes-list">ddddd</div>
-        <div className="right-text-edit">dfadfads</div>
+        <NotebookNothing />
+        {/* <NoteList /> */}
+        {/* <div className="right-text-edit">dfadfads</div> */}
       </div>
     </div>
   );
