@@ -13,8 +13,6 @@ import CreateNewNotebook from "../modalCreateNewNotebook/createNewNotebook";
 
 function LeftNav() {
   const [modalOpen, setModalOpen] = useState(false);
-  const [nameValue, setNameValue] = useState("");
-  console.log(nameValue);
 
   return (
     <div className="left-nav-bar">
@@ -79,12 +77,7 @@ function LeftNav() {
       <div className="title1">
         <div>TRASH</div>
       </div>
-      {modalOpen && (
-        <CreateNewNotebook
-          setModalOpen={setModalOpen}
-          setNotebookTitleValue={setNameValue}
-        />
-      )}
+      {modalOpen && <CreateNewNotebook setModalOpen={setModalOpen} />}
     </div>
   );
 }

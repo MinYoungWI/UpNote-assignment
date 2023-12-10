@@ -2,7 +2,7 @@ import "./createNewNotebook.css";
 import React, { useState, useRef, useEffect } from "react";
 import { BsChevronDown } from "react-icons/bs";
 
-function CreateNewNotebook({ setModalOpen, setNotebookTitleValue }) {
+function CreateNewNotebook({ setModalOpen }) {
   const modalRef = useRef();
 
   const [nameValue, setNameValue] = useState("");
@@ -37,7 +37,7 @@ function CreateNewNotebook({ setModalOpen, setNotebookTitleValue }) {
 
   const clickedCreateBtn = (event) => {
     setNameValue(event.target.value);
-    setNotebookTitleValue(nameValue);
+    localStorage.setItem("notebookName", nameValue);
   };
 
   return (
@@ -51,7 +51,7 @@ function CreateNewNotebook({ setModalOpen, setNotebookTitleValue }) {
       <div className="right-create-wrap">
         <input
           placeholder="Enter Notebook name"
-          onChange={clickedCreateBtn}
+          onChange={(e) => setNameValue(e.target.value)}
         ></input>
         <div className="notebooks">
           Notebooks
