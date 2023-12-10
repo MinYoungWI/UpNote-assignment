@@ -1,0 +1,107 @@
+.create-square {
+  width: 70px;
+  height: 85px;
+  background-color: rgb(121, 121, 169);
+  margin: 10px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.createNewNotebook-modal-box {
+  width: 576px;
+  height: 490px;
+  background-color: rgb(65, 65, 65);
+  z-index: 1;
+  position: absolute;
+  top: 32%;
+  left: 32%;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.createNewNotebook-modal-box .modal-title {
+  width: 100%;
+  height: auto;
+  color: white;
+  text-align: center;
+  margin: 17px 0;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.createNewNotebook-modal-box .left-create-wrap {
+  width: 25%;
+  height: 100%;
+}
+
+.createNewNotebook-modal-box .left-create-wrap div {
+  width: 100%;
+  height: 50px;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+}
+
+.createNewNotebook-modal-box .left-create-wrap .name {
+  height: 90px;
+}
+
+.createNewNotebook-modal-box .right-create-wrap {
+  flex: 1;
+  height: 100%;
+}
+
+.createNewNotebook-modal-box .right-create-wrap input {
+  width: 90%;
+  height: 20px;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: rgb(189, 189, 189);
+  margin: 0 10px;
+}
+
+.createNewNotebook-modal-box .right-create-wrap .notebooks {
+  color: white;
+  margin: 15px 10px;
+}
+
+.createNewNotebook-modal-box .right-create-wrap .displayFlex {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.createNewNotebook-modal-box .right-create-wrap .white-oval {
+  width: 45px;
+  height: 20px;
+  background-color: #fff;
+  border-radius: 25px;
+  margin: 0 10px;
+}
+
+.createNewNotebook-modal-box .right-create-wrap .lockImg {
+  width: 22px;
+  height: 22px;
+}
+
+.sqare-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 35px;
+}
+
+.createNewNotebook-modal-box .createbtn {
+  width: 80px;
+  height: 35px;
+  border-radius: 10px;
+  color: gray;
+  border: gray 1px solid;
+  background-color: inherit;
+  cursor: pointer;
+  position: absolute;
+  bottom: 25px;
+  right: 50px;
+}

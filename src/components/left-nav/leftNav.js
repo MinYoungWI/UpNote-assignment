@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import "./leftNav.css";
 import { BsChevronRight } from "react-icons/bs";
 import { BsChevronDown } from "react-icons/bs";
@@ -8,8 +9,11 @@ import { FiCloudOff } from "react-icons/fi";
 import { FaRegStar } from "react-icons/fa";
 import { SiSharp } from "react-icons/si";
 import { FaPlus } from "react-icons/fa6";
+import CreateNewNotebook from "../modalCreateNewNotebook/createNewNotebook";
 
 function LeftNav() {
+  let [modalOpen, setModalOpen] = useState(false);
+
   return (
     <div className="left-nav-bar">
       <div className="title1 all-notes">
@@ -45,7 +49,12 @@ function LeftNav() {
         <div>
           <BsChevronDown className="icon" />
           NOTEBOOKS
-          <FaPlus className="plus-icon" />
+          <FaPlus
+            onClick={() => {
+              setModalOpen(true);
+            }}
+            className="plus-icon"
+          />
         </div>
         <div className="title2 get-started">
           <img src="https://cdn.icon-icons.com/icons2/625/PNG/512/paper-plane_icon-icons.com_57396.png" />
@@ -68,6 +77,9 @@ function LeftNav() {
       <div className="title1">
         <div>TRASH</div>
       </div>
+      {modalOpen && (
+        <CreateNewNotebook modalOpen={modalOpen} setModalOpen={setModalOpen} />
+      )}
     </div>
   );
 }

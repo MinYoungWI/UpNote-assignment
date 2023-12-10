@@ -1,0 +1,10 @@
+.main-box {
+  width: 100%;
+  height: auto;
+  display: flex;
+  position: relative;
+}
+
+.main-box .right-text-edit {
+  width: auto;
+}
