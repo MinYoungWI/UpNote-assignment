@@ -7,6 +7,28 @@
   border: none;
   cursor: pointer;
 }
+/* 커버 색상 */
+.one {
+  background-color: #ffd6ff;
+}
+.two {
+  background-color: #e7c6ff;
+}
+.three {
+  background-color: #c8b6ff;
+}
+.four {
+  background-color: #b8c0ff;
+}
+.five {
+  background-color: #cbc0d3;
+}
+.six {
+  background-color: #bbd0ff;
+}
+.seven {
+  background-color: #8e9aaf;
+}
 
 .createNewNotebook-modal-box {
   width: 576px;

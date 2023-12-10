@@ -12,7 +12,9 @@ import { FaPlus } from "react-icons/fa6";
 import CreateNewNotebook from "../modalCreateNewNotebook/createNewNotebook";
 
 function LeftNav() {
-  let [modalOpen, setModalOpen] = useState(false);
+  const [modalOpen, setModalOpen] = useState(false);
+  const [nameValue, setNameValue] = useState("");
+  console.log(nameValue);
 
   return (
     <div className="left-nav-bar">
@@ -58,7 +60,7 @@ function LeftNav() {
         </div>
         <div className="title2 get-started">
           <img src="https://cdn.icon-icons.com/icons2/625/PNG/512/paper-plane_icon-icons.com_57396.png" />
-          Get Started
+          {}
         </div>
       </div>
       <div className="title1 tags">
@@ -78,7 +80,10 @@ function LeftNav() {
         <div>TRASH</div>
       </div>
       {modalOpen && (
-        <CreateNewNotebook modalOpen={modalOpen} setModalOpen={setModalOpen} />
+        <CreateNewNotebook
+          setModalOpen={setModalOpen}
+          setNotebookTitleValue={setNameValue}
+        />
       )}
     </div>
   );

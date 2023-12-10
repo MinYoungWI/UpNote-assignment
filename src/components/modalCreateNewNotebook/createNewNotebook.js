@@ -1,9 +1,11 @@
 import "./createNewNotebook.css";
-import React, { useRef, useEffect } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { BsChevronDown } from "react-icons/bs";
 
-function CreateNewNotebook({ modalOpen, setModalOpen }) {
+function CreateNewNotebook({ setModalOpen, setNotebookTitleValue }) {
   const modalRef = useRef();
+
+  const [nameValue, setNameValue] = useState("");
 
   // 모달 외부 클릭 시 닫기
   const handleOutsideClick = (e) => {
@@ -22,12 +24,21 @@ function CreateNewNotebook({ modalOpen, setModalOpen }) {
     };
   }, []);
 
-  const Square = () => {
-    return <button className="create-square"></button>;
+  const Square = ({ index }) => {
+    const colors = ["one", "two", "three", "four", "five", "six", "seven"];
+    const colorIndex = index % colors.length;
+    const squareColor = colors[colorIndex];
+
+    return <button className={`create-square ${squareColor}`}></button>;
   };
 
   const numberOfSquares = 7;
   const squaresArray = Array.from({ length: numberOfSquares }, (v, i) => i);
+
+  const clickedCreateBtn = (event) => {
+    setNameValue(event.target.value);
+    setNotebookTitleValue(nameValue);
+  };
 
   return (
     <div ref={modalRef} className="createNewNotebook-modal-box">
@@ -38,7 +49,10 @@ function CreateNewNotebook({ modalOpen, setModalOpen }) {
         <div>Cover</div>
       </div>
       <div className="right-create-wrap">
-        <input placeholder="Enter Notebook name"></input>
+        <input
+          placeholder="Enter Notebook name"
+          onChange={clickedCreateBtn}
+        ></input>
         <div className="notebooks">
           Notebooks
           <BsChevronDown
@@ -55,11 +69,13 @@ function CreateNewNotebook({ modalOpen, setModalOpen }) {
         </div>
         <div className="sqare-wrap">
           {squaresArray.map((square, index) => (
-            <Square key={index} />
+            <Square key={index} index={index} />
           ))}
         </div>
       </div>
-      <button className="createbtn">Create</button>
+      <button className="createbtn" onClick={clickedCreateBtn}>
+        Create
+      </button>
     </div>
   );
 }
