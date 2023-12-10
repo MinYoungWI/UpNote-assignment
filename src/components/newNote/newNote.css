@@ -1,0 +1,29 @@
+.made-new-note {
+  flex: 1;
+}
+
+.made-new-note .center-position {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 150px;
+}
+
+.made-new-note .center-position .selected-square-color {
+  width: 70px;
+  height: 85px;
+  background-color: #ffd6ff;
+  margin: 10px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.made-new-note .center-position .new-note {
+  color: rgb(0, 106, 255);
+  font-weight: bold;
+}
+
+.made-new-note .center-position div:nth-child(2) {
+  margin: 10px 0;
+}

@@ -38,6 +38,7 @@ function CreateNewNotebook({ setModalOpen }) {
   const clickedCreateBtn = (event) => {
     setNameValue(event.target.value);
     localStorage.setItem("notebookName", nameValue);
+    setModalOpen(false);
   };
 
   return (
