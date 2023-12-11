@@ -15,10 +15,6 @@
 .title2 {
   padding-left: 20px;
 }
-/* 기능 추가할 때 수정할 부분 */
-.title1 .get-started {
-  display: none;
-}
 
 .icon {
   margin-right: 7px;
