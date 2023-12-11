@@ -9,12 +9,21 @@ import { FiCloudOff } from "react-icons/fi";
 import { FaRegStar } from "react-icons/fa";
 import { SiSharp } from "react-icons/si";
 import { FaPlus } from "react-icons/fa6";
+import { MdDeleteOutline } from "react-icons/md";
 import CreateNewNotebook from "../modalCreateNewNotebook/createNewNotebook";
 
 function LeftNav() {
   const [modalOpen, setModalOpen] = useState(false);
   const [createNotebookState, setCreateNotebookState] = useState(""); // CreateNewNotebook의 상태
 
+  const DeleteNotebooksList = () => {
+    if (window.confirm("삭제하시겠습니까?")) {
+      alert("삭제되었습니다.");
+      localStorage.removeItem(`notebookKey${createNotebookState}`);
+    } else {
+      alert("취소합니다.");
+    }
+  };
   return (
     <div className="left-nav-bar">
       <div className="title1 all-notes">
@@ -62,6 +71,10 @@ function LeftNav() {
           <div className="title2">
             <img src="https://cdn.icon-icons.com/icons2/625/PNG/512/paper-plane_icon-icons.com_57396.png" />
             {localStorage.getItem(`notebookKey${createNotebookState}`)}
+            <MdDeleteOutline
+              onClick={DeleteNotebooksList}
+              className="deleteBut"
+            />
           </div>
         ) : (
           <div className="title2" style={{ display: "none" }}></div>

@@ -2,11 +2,7 @@ import "./createNewNotebook.css";
 import React, { useState, useRef, useEffect } from "react";
 import { BsChevronDown } from "react-icons/bs";
 
-function CreateNewNotebook({
-  setModalOpen,
-  createNotebookState,
-  setCreateNotebookState,
-}) {
+function CreateNewNotebook({ setModalOpen, setCreateNotebookState }) {
   const modalRef = useRef();
 
   const [nameValue, setNameValue] = useState("");
@@ -42,6 +38,7 @@ function CreateNewNotebook({
   const clickedCreateBtn = (event) => {
     setNameValue(event.target.value);
     localStorage.setItem(`notebookKey${nameValue}`, nameValue);
+    localStorage.setItem(`notebookKey`, nameValue);
     // setCreateNotebookState를 사용하여 상태 업데이트
     setCreateNotebookState(nameValue);
     setModalOpen(false);
